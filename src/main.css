@@ -1,0 +1,51 @@
+@import './css/reset.css';
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url(./assets/fonts/Monserrat/Montserrat-SemiBold.ttf)format('truetype');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Rota';
+    src: local('Rota'), url(./assets/fonts/Rota/Rota-Black.otf) format('opentype');
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: 'Rota';
+    src: local('Rota'), url(./assets/fonts/Rota/Rota-ExtraBold.otf) format('opentype');
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: 'Rota';
+    src: local('Rota'), url(./assets/fonts/Rota/Rota-Regular.otf) format('opentype');
+    font-weight: normal;
+  }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+}
+
+/* stylelint-disable */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* stylelint-enable */
+
+body {
+    background: radial-gradient(103.58% 293.07% at 0% 0%, #1A40B0 0%, #2F46CD 100%);
+    color: white;
+    font-size: 1.6rem;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Rota';
+    font-weight: normal;
+    overflow: hidden;
+}

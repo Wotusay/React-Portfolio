@@ -1,0 +1,29 @@
+.picture {
+    z-index: -1;
+    position: absolute;
+    top: 195px;
+    right: 80px;
+
+}
+
+.pictureLatest {
+    z-index: -1;
+    position: absolute;
+
+}
+.pictureNewest {
+    z-index: -1;
+    filter: blur(4px) drop-shadow(-2px -10px 25px rgba(0, 0, 0, 0.29));
+    position: absolute;
+    z-index: -2;
+    transform: rotate(-15deg);
+    right: .03px;
+    bottom: -550.1px;
+}
+
+
+
+.homeWrapper {
+    
+    display: flex;
+}

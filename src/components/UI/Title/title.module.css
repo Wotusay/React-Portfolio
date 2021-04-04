@@ -1,0 +1,34 @@
+.title {
+    font-family: 'Rota';
+    font-weight: 900;
+    font-size: 7rem;
+    line-height: 8.7rem;
+}
+
+.tagline {
+    font-family: 'Rota';
+    font-weight: normal;
+    font-size: 2.3rem;
+    line-height: 2.9rem;
+    color: #C6C6C6;
+}
+
+
+.title::before {
+    content: '';
+
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 22.2rem;
+    z-index: 3;
+}
+
+.line {
+    margin-top: 3rem;
+}
+
+.text  {
+    margin-left: 3.1rem;
+}
