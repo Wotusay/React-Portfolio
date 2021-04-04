@@ -14,10 +14,6 @@
 }
 
 
-.title::before {
-    content: '';
-
-}
 
 .wrapper {
     display: flex;
@@ -27,6 +23,7 @@
 
 .line {
     margin-top: 3rem;
+
 }
 
 .text  {
