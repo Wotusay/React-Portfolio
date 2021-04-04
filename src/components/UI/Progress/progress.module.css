@@ -1,0 +1,20 @@
+.number {
+    font-family: 'Rota';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: 0.1em;
+    margin: 0px 20px;
+}
+
+.proggressWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigStroke {
+    margin-top: -10px;
+}
