@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
 import styles from './progress.module.css';
+import React from 'react';
+
 
 const Proggress = () => { 
     return (

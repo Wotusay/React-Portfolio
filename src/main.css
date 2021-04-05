@@ -49,3 +49,22 @@ body {
     font-weight: normal;
     overflow: hidden;
 }
+
+.begin {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-family: 'Rota';
+  font-weight: 900;
+  font-size: 10rem;
+  line-height: 8.7rem;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+

@@ -1,5 +1,7 @@
 import styles from "./title.module.css";
 import { motion } from "framer-motion";
+import React from 'react';
+
 
 const transition = { duration: 1.4, ease: [0.43, 0.13, 0.23, 0.96] };
 const transitionOne = { duration: 2, ease: [0.43, 0.13, 0.23, 0.96] };

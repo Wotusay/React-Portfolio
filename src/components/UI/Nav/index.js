@@ -1,36 +1,54 @@
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "../../../consts";
 import styles from "./nav.module.css";
+import { motion } from "framer-motion";
+import React from 'react';
+
+
 
 const Nav = () => {
+    const transitionOne = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
+    const transitionTwo = { duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] };
+    const transitionThree= { duration: 2.2, ease: [0.43, 0.13, 0.23, 0.96] };
+
     return (
         <>
         <nav className={styles.NavGrid}>
-            <div className={styles.titleWrapper}>
+            <motion.div initial={{translateY:'-101px',opacity:0}}
+         style={{translateY:'-101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
+                    transition={ transitionOne} className={styles.titleWrapper}>
                 <NavLink className={styles.Navitem} style={{textDecoration: 'none'}} to={ROUTES.home}>
                     <span className={styles.logo} >Wout.</span>
                 </NavLink>
-            </div>
+            </motion.div>
 
             <div className={styles.Navitems}>
-            <div>
+            <motion.div initial={{translateY:'-101px',opacity:0}}
+         style={{translateY:'-101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
+                    transition={ transitionTwo}>
                 <NavLink  className={styles.Navitem} style={{textDecoration: 'none'}} to={ROUTES.home}>
                     <span className={styles.item}>Work</span>
                 </NavLink>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div initial={{translateY:'-101px',opacity:0}}
+         style={{translateY:'-101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
+                    transition={ transitionTwo}>
                 <NavLink className={styles.Navitem} style={{textDecoration: 'none'}} to={ROUTES.home}>
                     <span className={styles.item}>About</span>
                 </NavLink>
-            </div> 
-            <div className={styles.item}> 
+            </motion.div> 
+            <motion.div initial={{translateY:'-101px',opacity:0}}
+         style={{translateY:'-101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
+                    transition={ transitionTwo} className={styles.item}> 
                 <svg width="2" height="22" viewBox="0 0 2 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.791992 1.4942V21" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
-            </div>
+            </motion.div>
             <div >
-                <div className={styles.socials}>
+                <motion.div initial={{translateY:'-101px',opacity:0}}
+         style={{translateY:'-101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
+                    transition={ transitionThree} className={styles.socials}>
                 <a className={styles.social} href='https://github.com/Wotusay' ><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 22.027V18.157C15.0375 17.6802 14.9731 17.2008 14.811 16.7508C14.6489 16.3008 14.3929 15.8904 14.06 15.547C17.2 15.197 20.5 14.007 20.5 8.54702C20.4997 7.15085 19.9627 5.80822 19 4.79702C19.4559 3.57553 19.5136 2.2251 19 1.02675C19 1.02675 17.73 0.677024 15 2.50702C12.708 1.88585 10.292 1.88585 8 2.50702C5.27 0.677024 4.09 1.02702 4.09 1.02702C3.57638 2.22537 3.54414 3.57553 4 4.79702C3.03013 5.81572 2.49252 7.17049 2.5 8.57702C2.5 13.997 5.8 15.187 8.94 15.577C8.611 15.917 8.35726 16.3224 8.19531 16.7669C8.03335 17.2115 7.96681 17.6851 8 18.157V22.027M8 19.027C3 20.527 3 16.527 1 16.027L8 19.027Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -51,7 +69,7 @@ const Nav = () => {
                 </svg>
                 </a>
 
-                </div>
+                </motion.div>
             </div>
             </div>
         </nav>
