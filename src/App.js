@@ -5,6 +5,7 @@ import { ROUTES } from "./consts";
 import { AnimatePresence } from "framer-motion";
 import { motion, useAnimation } from "framer-motion";
 import React,{ useState } from "react";
+import Empty from "./components/UI/Empty";
 
 
 const App = ()  => {
@@ -46,6 +47,8 @@ const App = ()  => {
       )} /> 
       </>
       }
+
+      <Empty></Empty>
     </>
   );
 }

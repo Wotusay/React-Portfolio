@@ -1,6 +1,7 @@
 .NavGrid {
     display: flex;
     justify-content: space-between;
+    z-index: 2;
 }
 
 .Navitems {
@@ -9,6 +10,8 @@
     justify-content: center;
     align-items: center;
     padding-top: 6.8rem;
+    z-index: 2;
+
     padding-right: 10rem;
 
 }
@@ -19,12 +22,13 @@
     font-weight: 600;
 }
 
-.Navitem:hover { 
-}
+
 
 .item {
     margin: 0px 3.7rem;
     transition: all;
+    z-index: 2;
+
 
 }
 

@@ -1,5 +1,4 @@
 .picture {
-    z-index: -1;
     margin-top: 43px;
     margin-left: 160px;
 
@@ -45,4 +44,8 @@
     border: none;
     margin-right: 10.2rem;
 
+}
+
+.spinner {
+    position: absolute;
 }
