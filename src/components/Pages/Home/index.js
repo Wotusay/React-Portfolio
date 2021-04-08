@@ -5,6 +5,7 @@ import Proggress from "../../UI/Progress";
 import React, { useState } from 'react';
 
 
+
 const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
 const transitionOne = { duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -13,6 +14,8 @@ const Home = () => {
     const [clickedNext, setClickedNext] = useState(false);
     const [clickedPrev, setClickedPrev] = useState(false);
     const [animationNumber, setAnimationNumber] = useState('');
+    const [tag,setTag] = useState('Web experience');
+    const [title,setTitle] = useState('Humo webshop');
 
     const allItems = 8;
     const imageVariants = {
@@ -24,8 +27,7 @@ const Home = () => {
         rotate: '10deg', 
         translateY:'-680px',
         translateX:'50px',
-        opacity:1,
-        filter: 'blur(2px)'
+        opacity:0.7,
       }, 
       back: {
         rotate: '0deg', 
@@ -38,8 +40,7 @@ const Home = () => {
     const imageTwoVariants = {
       start: {
         translateX:'50px', 
-        opacity:1, 
-        filter: 'blur(2px)',
+        opacity:0.7, 
         rotate: '-10deg', 
         translateY:'100px'
       }, 
@@ -51,8 +52,7 @@ const Home = () => {
       }, 
       back: {
         translateX:'50px', 
-        opacity:1, 
-        filter: 'blur(2px)',
+        opacity:0.7, 
         rotate: '-10deg', 
         translateY:'100px'
       }
@@ -66,10 +66,11 @@ const Home = () => {
       setClickedNext(true);
       setAnimationNumber('Increase');
       if (count === allItems) {
-        return setCount(1);
+        setCount(1)
+        return countChecker(count);
       }
       setCount(count + 1);
-      
+      countChecker(count);
     }
 
     const handleClickPrev = (e) => {
@@ -77,9 +78,52 @@ const Home = () => {
       setAnimationNumber('Decrease');
       setClickedPrev(true);
       if (count === 1) {
+        setCount(8);
+        countChecker(count);
         return;
       }
       setCount(count - 1);
+      countChecker(count);
+
+    }
+
+    const countChecker = id => {
+      switch(id) {
+        case 1:
+          setTitle('Humo webshop');
+          setTag('Web experience');
+          break;
+        case 2:
+          setTitle('test');
+          setTag('test');
+          break;
+        case 3:
+          setTitle('Humo');
+          setTag('Web experience');
+          break;
+        case 4:
+          setTitle('Webshop');
+          setTag('Web experience');
+          break;
+        case 5:
+          setTitle('Testing 123');
+          setTag('Web experience');
+          break;
+        case 6:
+          setTitle('project');
+          setTag('Web experience');
+          break;
+        case 7:
+          setTitle('yeah bttv');
+          setTag('Web experience');
+          break;
+        case 8:
+          setTitle('hire me');
+          setTag('Web experience');
+          break;
+        default: 
+        return;
+      }
     }
 
 
@@ -89,7 +133,7 @@ const Home = () => {
     return ( 
         <>
         <div className={styles.homeWrapper}>
-        <Title text={'Humo webshop'} tag={'Web experience'} />
+        <Title count={count} text={title} tag={tag} />
         <div>
           
         <motion.img

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 
 const Proggress = ({number, maxItems,animation}) => { 
-    const transition = { duration: 0.2, ease: [0.43, 0.13, 0.23, 0.96] };
+    const transition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
 
     return (
         <>
