@@ -1,24 +1,9 @@
-import GraphQLService from "../contentfull";
-import { action, decorate, observable } from "mobx";
+import PortfolioStore from "./portfolioStore";
 
-
-class PortfolioStore {
+class RootStore {
     constructor() {
-        this.portfolioItems = [];
-        this.graphQlService = new GraphQLService();
-    }
-
-    loadAllItems = async () => {
-        const items = await this.graphQlService.getAll();
-        console.log(items.portfolioItemCollection.items);
-        this.portfolioItems.push(items)
+        this.portfolioStore = new PortfolioStore(this);
     }
 }
 
-decorate(PortfolioStore, {
-    portfolioItems: observable, 
-    loadAllItems: action
-})
-
-
-export default PortfolioStore; 
+export default RootStore; 

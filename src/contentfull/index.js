@@ -5,6 +5,7 @@ class GraphQLService {
         items {
           id
           title
+          tagline
           description
           setVisable
           utitlies

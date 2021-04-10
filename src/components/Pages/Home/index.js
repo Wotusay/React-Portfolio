@@ -3,6 +3,8 @@ import styles from './home.module.css';
 import { motion } from "framer-motion";
 import Proggress from "../../UI/Progress";
 import React, { useState } from 'react';
+import { useStores } from "../../../hooks";
+import { useObserver } from 'mobx-react-lite';
 
 
 
@@ -10,14 +12,15 @@ const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
 const transitionOne = { duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Home = () => {
-    const [count, setCount ] = useState(1);
+    const [count, setCount ] = useState(0);
     const [clickedNext, setClickedNext] = useState(false);
     const [clickedPrev, setClickedPrev] = useState(false);
     const [animationNumber, setAnimationNumber] = useState('');
-    const [tag,setTag] = useState('Web experience');
-    const [title,setTitle] = useState('Humo webshop');
+    const {portfolioStore} = useStores();
+    const allItems = portfolioStore.portfolioItems.length;
+    const [countProgress, setCountProgress ] = useState(1);
 
-    const allItems = 8;
+
     const imageVariants = {
       start: {
         translateX:'0px', 
@@ -65,28 +68,33 @@ const Home = () => {
       setClickedPrev(false);
       setClickedNext(true);
       setAnimationNumber('Increase');
-      if (count === allItems) {
-        setCount(1)
-        return countChecker(count);
+      if (countProgress === allItems) {
+        setCountProgress(1);
+        setCount(0);
+        return;
       }
       setCount(count + 1);
-      countChecker(count);
+      setCountProgress(countProgress+1);
+
+
+    
     }
 
     const handleClickPrev = (e) => {
       setClickedNext(false);
       setAnimationNumber('Decrease');
       setClickedPrev(true);
-      if (count === 1) {
-        setCount(8);
-        countChecker(count);
+      if (countProgress === 1) {
+        setCountProgress(allItems);
+        setCount(allItems - 1);
         return;
       }
+      setCountProgress(countProgress-1);
       setCount(count - 1);
-      countChecker(count);
-
+      console.log(count)
     }
-
+ 
+    /*
     const countChecker = id => {
       switch(id) {
         case 1:
@@ -124,56 +132,57 @@ const Home = () => {
         default: 
         return;
       }
-    }
-
+    }*/
 
 
     //<img className={styles.pictureLatest}  src='../assets/pictures/Neuromancer.png' />
     //<img className={styles.pictureNewest}  alt="pi" src='../assets/pictures/Neuromancer.png' />
-    return ( 
+    return useObserver(() => (
         <>
         <div className={styles.homeWrapper}>
-        <Title count={count} text={title} tag={tag} />
-        <div>
-          
-        <motion.img
-           initial={{translateX:'101px',opacity:0}}
-           variants={imageVariants}
-           animate={clickedNext ? "next" : clickedPrev ? "back" : "start"}
-           transition={transition}
-           className={styles.picture}
-          alt="pic1"  src='../assets/pictures/Neuromancer.png' />
-        <div className={styles.spinner}>
-        <motion.img
-           initial={{translateX:'101px',opacity:0}}
-           variants={imageTwoVariants}
-           animate={clickedNext ? "next" : clickedPrev ? "back" : "start"}
-           transition={transition}
-           style={{rotate: '-10deg', translateY:'100px'}}
-           className={styles.picture}
-          alt="pic1"  src='../assets/pictures/Neuromancer.png' />
-
-          
+          <Title count={count} text={portfolioStore.portfolioItems[count].title} tag={portfolioStore.portfolioItems[count].tagline} />
+          <div>
+          <motion.img
+            initial={{translateX:'101px',opacity:0}}
+            variants={imageVariants}
+            animate={clickedNext ? "next" : clickedPrev ? "back" : "start"}
+            transition={transition}
+            className={styles.picture}
+            width={portfolioStore.portfolioItems[0].header.width}
+            height={portfolioStore.portfolioItems[0].header.height}
+            alt={portfolioStore.portfolioItems[0].header.title}  src={portfolioStore.portfolioItems[0].header.url} />
+          <div className={styles.spinner}>
+          <motion.img
+            initial={{translateX:'101px',opacity:0}}
+            variants={imageTwoVariants}
+            animate={clickedNext ? "next" : clickedPrev ? "back" : "start"}
+            transition={transition}
+            width={portfolioStore.portfolioItems[1].header.width}
+            height={portfolioStore.portfolioItems[1].header.height}
+            style={{rotate: '-10deg', translateY:'100px'}}
+            className={styles.picture}
+            alt={portfolioStore.portfolioItems[1].header.title} src={portfolioStore.portfolioItems[1].header.url} />
+        </div>
           </div>
         </div>
-        </div>
 
-        <motion.div      initial={{translateY:'101px',opacity:0}}
-         style={{translateY:'101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
-                    transition={ transitionOne} className={styles.footerWrapper}>
+        <motion.div initial={{translateY:'101px',opacity:0}}
+        style={{translateY:'101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
+        transition={ transitionOne} className={styles.footerWrapper}>
             <button onClick={(e) => handleClickPrev(e)} className={styles.buttonLeft}><svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.1216 28.189L3.02814 15.0955L16.1216 2.00208" stroke="white" stroke-width="3" stroke-linecap="round"/>
-</svg>
-</button>
-            <Proggress animation={animationNumber}  number={count} maxItems={allItems}/>
+              <path d="M16.1216 28.189L3.02814 15.0955L16.1216 2.00208" stroke="white" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </button>
+
+        <Proggress animation={animationNumber}  number={countProgress} maxItems={allItems}/>
             <button onClick={(e) => handleClickNext(e)} className={styles.buttonRight}><svg width="18" height="30" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.91406 25.535L13.6341 13.815L1.91406 2.09497" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</button>
+              <path d="M1.91406 25.535L13.6341 13.815L1.91406 2.09497" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
         </motion.div>
 
         </>
-    )
+    ))
 }
 
 export default Home;
