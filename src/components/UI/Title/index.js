@@ -14,13 +14,12 @@ const Title = ({text, tag, count}) => {
         <div className={styles.wrapper}>
         <motion.div
         key={count}
-        initial={{x:'-101px',opacity:0}}
-         style={{x:'-101px',opacity:0}} 
-         animate={{x:'0px',opacity:1}} 
-         exit={{x:'-101px', opacity:0}}
+        initial={{translateX:'-101px',opacity:0}}
+        animate={{translateX:'0px',opacity:1}} 
+        exit={{translateX:'-101px', opacity:0}}
         transition={ transitionOne}   className={styles.line}>
             <svg width="101" height="7" viewBox="0 0 101 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 3.34401H100.728" stroke="white" stroke-width="6"/>
+            <path d="M0 3.34401H100.728" stroke="white" strokeWidth="6"/>
             </svg>
         </motion.div>
 
@@ -29,13 +28,13 @@ const Title = ({text, tag, count}) => {
             key={text} 
             initial={{translateX:'-101px', opacity:0}}
             animate={{translateX:'0px', opacity:1}} 
-            exit={{x:'-101px', opacity:0}}
+            exit={{translateX:'-101px', opacity:0}}
             transition={ transition}  className={styles.title}>{text}</motion.h1>
         <motion.p
             key={count}
             initial={{translateX:'-101px', opacity:0}}
             animate={{translateX:'0px', opacity:1}} 
-            exit={{x:'-101px', opacity:0}}
+            exit={{translateX:'-101px', opacity:0}}
             transition={transitionTwo}  className={styles.tagline}>{tag}</motion.p>
         </div>
 

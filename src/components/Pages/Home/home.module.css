@@ -1,8 +1,10 @@
 .picture {
-    margin-top: 43px;
+    margin-top: 60px;
     margin-left: 160px;
-
+    opacity: 0;
+    position: absolute;
 }
+
 
 .pictureLatest {
     z-index: -1;
@@ -18,8 +20,6 @@
     right: .03px;
     bottom: -550.1px;
 }
-
-
 
 .homeWrapper {
     
@@ -47,5 +47,6 @@
 }
 
 .spinner {
-    position: absolute;
+
+    height: 67vh;
 }

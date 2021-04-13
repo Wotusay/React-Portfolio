@@ -12,7 +12,6 @@ const App = ()  => {
   const [loaded, setLoaded] = useState(false);
   const animation = useAnimation();
   const textAnimation = useAnimation();
- // const store = new PortfolioStore(); 
 
 
   const sequence = async () => {
@@ -21,10 +20,8 @@ const App = ()  => {
     //await store.loadAllItems();
     await animation.start({opacity:1,  translateY:'0px'  ,transition: {duration: 0.4}});
     await animation.start({opacity:0, translateY:'-101px', transition: {duration: 1}});
-    setLoaded(true);
+    await setLoaded(true);
   }
-
-  // const graphQLService = new GraphQLService(); 
 
   useEffect(() => {
     sequence();
