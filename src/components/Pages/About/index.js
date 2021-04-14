@@ -36,7 +36,7 @@ const About = () => {
         }
 
 
-    })
+    },[inMainSkillsView,inContactView,inInterestsView,mainSkillsAnimation,interestsAnimation,contactAnimation])
     return(
         <> 
         <div onLoad={setOverflow()}>
@@ -57,7 +57,7 @@ const About = () => {
                 transition={ transition} className={styles.underTitle}> My name is <strong>Wout Salembier</strong>. I'm a 20 year old creative developer. I’m currently studying <br/>
                 <a className={styles.textLink} href="https://www.devine.be/" >Devine at Howest and The School of Arts (KASK)</a>
                 .</motion.p>
-                <motion.button initial={{translateX:'-101px',opacity:0}}
+                <motion.button type="submit" onClick={()  =>  window.open('../assets/cv.pdf')} initial={{translateX:'-101px',opacity:0}}
                 animate={{translateX:'0px',opacity:1}} 
                 exit={{translateX:'-101px', opacity:0}}
                 transition={transitionOne}  className={styles.button}>Resume <svg className={styles.icon} width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">

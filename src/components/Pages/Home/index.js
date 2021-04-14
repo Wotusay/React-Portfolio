@@ -51,13 +51,7 @@ const Home = () => {
         }
 
       }
-    
-
-
     }
-
-
-
 
     const handleClickNext = async (e) => {
 
