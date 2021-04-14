@@ -47,7 +47,6 @@ body {
     height: 100vh;
     font-family: 'Rota';
     font-weight: normal;
-    overflow: hidden;
 }
 
 .begin {
@@ -68,3 +67,11 @@ button {
   outline: none;
 }
 
+.hidden  {
+  display: none;
+}
+
+strong {
+  font-weight: bold;
+  color: white;
+}

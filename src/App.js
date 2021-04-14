@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import { motion, useAnimation } from "framer-motion";
 import React,{ useEffect, useState } from "react";
 import Empty from "./components/UI/Empty";
+import About from "./components/Pages/About";
 
 
 const App = ()  => {
@@ -43,8 +44,8 @@ const App = ()  => {
     <Route render={({location}) => (
     <AnimatePresence exitBeforeEnter>
       <Switch location={location} key={location.pathname}>
-        <Route exact path={ROUTES.home} render={() => <Home></Home>}/>
-        <Route exact strict path={ROUTES.about} render={() => <Home></Home>}/>
+        <Route exact path={ROUTES.home} render={() => <div style={{overflow:'hidden' ,height:'100vh'}}> <Home></Home></div> }/>
+        <Route exact strict path={ROUTES.about} render={() => <About></About>}/>
       </Switch>
       </AnimatePresence>
       )} /> 

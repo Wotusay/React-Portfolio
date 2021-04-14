@@ -1,0 +1,121 @@
+.social {
+    margin: 0px 1rem;
+}
+
+.title {
+    font-family: 'Rota';
+    font-weight: 900;
+    font-size: 7rem;
+    line-height: 8.7rem;
+    width: 64rem;
+}
+
+
+.titleMid {
+    font-family: 'Rota';
+    font-weight: 900;
+    font-size: 7rem;
+    line-height: 8.7rem;
+}
+body {
+    overflow: auto;
+}
+
+.aboutSection {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10rem;
+    margin-right: 10.1rem;
+    margin-top: 9rem;
+    align-items: center;
+    margin-bottom: 12rem;
+}
+
+.containerSkills {
+    display: grid;
+    grid-column-gap: 28rem;
+    grid-row-gap: 5.5rem;
+    grid-template-columns: 32rem 32rem 32rem;
+    margin-top: 6.5rem;
+    margin-bottom: 12rem;
+}
+
+
+.skillsSection {
+    margin-left: 10rem;
+    margin-right: 10.1rem;
+}
+
+.text {
+    font-family: 'Rota';
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    color: #D9D9D9
+}
+
+.skillsItem {
+    line-height: 4.7rem;
+    gap: 3rem;
+    width: 32rem;
+}
+
+.icon {
+    margin-left: 1rem;
+    margin-top: -1rem;
+}
+
+.underTitle {
+    width: 65rem;
+    font-family: 'Rota';
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    color: #D9D9D9;
+    margin-top: 4.5rem;
+}
+
+.button {
+    background-color: white;
+    color: #2242BC;
+    border: none;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 206.28px;
+    height: 56.73px;
+    border-radius: 6px;
+    margin-top: 6rem;
+}
+
+.textLink {
+    font-weight: bold;
+    color: white;
+}
+
+.interestsContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12rem;
+
+}
+
+.wrapperInterests {
+    display: grid;
+    grid-column-gap:11rem;
+    grid-row-gap:6.5rem;
+    margin-top: 7.5rem;
+    grid-template-columns: 17rem 17rem 17rem 17rem;
+}
+
+
+.contactContainer {
+    display: flex;
+    gap: 5rem;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12rem;
+
+}

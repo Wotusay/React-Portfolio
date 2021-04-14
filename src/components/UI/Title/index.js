@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import React from 'react';
 
 
-const transition = { duration: 1.4, ease: [0.43, 0.13, 0.23, 0.96] };
-const transitionOne = { duration: 2, ease: [0.43, 0.13, 0.23, 0.96] };
-const transitionTwo = { duration: 1.6, ease: [0.43, 0.13, 0.23, 0.96] };
+const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
+const transitionOne = { duration: 1.6, ease: [0.43, 0.13, 0.23, 0.96] };
+const transitionTwo = { duration: 1.4, ease: [0.43, 0.13, 0.23, 0.96] };
 
 
 const Title = ({text, tag, count}) => {

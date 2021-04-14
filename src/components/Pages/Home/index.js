@@ -9,7 +9,7 @@ import { useObserver } from 'mobx-react-lite';
 
 
 const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
-const transitionOne = { duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] };
+const transitionOne = { duration: 1.4, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Home = () => {
     const [count, setCount ] = useState(0);
@@ -50,14 +50,10 @@ const Home = () => {
           ease: [0.43, 0.13, 0.23, 0.96]
         }
 
-      },
+      }
     
 
-      back: {
-        opacity:1,
-        translateY: 0,
 
-      }
     }
 
 
@@ -87,19 +83,23 @@ const Home = () => {
       await setCount(count - 1);
     }
     
+    const setOverflow = () => {
+      document.body.style.overflow = "hidden";
+    }
 
 
     return useObserver (() => (
         <>
-        <div className={styles.homeWrapper}>
+        <div onLoad={setOverflow()} className={styles.homeWrapper}>
           <Title count={count} text={portfolioStore.portfolioItems[count].title} tag={portfolioStore.portfolioItems[count].tagline} />
           <div className={styles.spinner}>
             {portfolioStore.portfolioItems.map(item => (
-              
+            
             <motion.img
             key={item.title}
             initial={'disapearDown'}
             variants={imageVariants}
+            exit={'disapearUp'}
             animate={portfolioStore.portfolioItems[count].id === item.id ? 'start' : animationNumber === 'Increase'  ?  'disapearUp'  : animationNumber === 'Decrease' ? 'disapearDown'  : ['disapearUp','disapearDown']} 
             transition={transition}
             height={item.header.height}
@@ -111,6 +111,7 @@ const Home = () => {
         </div>
 
         <motion.div initial={{translateY:'101px',opacity:0}}
+        exit={{translateY:'101px',opacity:0}}
         style={{translateY:'101px',opacity:0}} animate={{translateY:'40px',opacity:1}} 
         transition={ transitionOne} className={styles.footerWrapper}>
             <button onClick={(e) =>  handleClickPrev(e)} className={styles.buttonLeft}><svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">

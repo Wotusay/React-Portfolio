@@ -14,7 +14,7 @@ const Proggress = ({number, maxItems,animation}) => {
             key={number}
             initial={{ opacity: 0, translateY: animation === 'Increase' ?  -50 : animation === 'Decrease' ? 50 : 50}}
             animate={{ opacity: 1, translateY: 0 }}
-            exit={{ opacity: 0, translateY: animation === 'Increase' ?  50 : animation === 'Decrease' ? -50 : 50 }}
+            exit={{ opacity:  animation === 'Increase' ?  0 : animation === 'Decrease' ? 0 :  1, translateY: animation === 'Increase' ?  50 : animation === 'Decrease' ? -50 : 0 }}
             transition={transition}
             style={{ position: "absolute" }}
           >

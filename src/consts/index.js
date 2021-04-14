@@ -1,6 +1,6 @@
 const ROUTES = {
     home: "/",
-    about:  "/about/",
+    about:  "/about",
 }
 
 export {ROUTES};

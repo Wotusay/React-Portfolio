@@ -34,7 +34,7 @@ const Nav = () => {
             <motion.div initial={{translateY:'-101px',opacity:0}}
          style={{translateY:'-101px',opacity:0}} animate={{translateY:'0px',opacity:1}} 
                     transition={ transitionTwo}>
-                <NavLink className={styles.Navitem} style={{textDecoration: 'none'}} to={ROUTES.home}>
+                <NavLink className={styles.Navitem} style={{textDecoration: 'none'}} to={ROUTES.about}>
                     <span className={styles.item}>About</span>
                 </NavLink>
             </motion.div> 
