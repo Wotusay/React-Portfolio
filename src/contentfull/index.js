@@ -1,11 +1,15 @@
 class GraphQLService {
-  getAll = async  () => {
+  getAll = async () => {
     const query = `{
       portfolioItemCollection {
         items {
           id
           title
           tagline
+          client
+          role
+          project
+          website
           description
           setVisable
           utitlies
@@ -15,13 +19,18 @@ class GraphQLService {
             width
             height
           }
+          detail {
+            title
+            url
+            width
+            height
+          }
         }
       }
     }`;
 
-
     const options = {
-      method: "POST",  
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         // Authenticate the request
@@ -34,10 +43,7 @@ class GraphQLService {
     const r = await fetch(url, options);
     const json = await r.json();
     return json.data;
-};
+  };
 }
 
-
 export default GraphQLService;
-
-  

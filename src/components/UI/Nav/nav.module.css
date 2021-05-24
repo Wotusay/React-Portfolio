@@ -26,9 +26,10 @@
 
 .item {
     margin: 0px 3.7rem;
-    transition: all;
+    transition: border ease 600ms;
+    padding-bottom: 0.4rem;
     z-index: 2;
-
+    border-bottom: 2px solid transparent;
 
 }
 
@@ -53,5 +54,18 @@
 }
 
 .social {
-    margin: 0px 2rem;
+    opacity: 0.8;
+    margin: 0px 1rem;
+    transition: all ease 600ms;
+}
+
+.social:hover {
+   opacity: 1;
+}
+
+.active {
+    margin: 0px 3.7rem;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.4rem;
+    z-index: 2;
 }

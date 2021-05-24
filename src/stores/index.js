@@ -1,9 +1,9 @@
 import PortfolioStore from "./portfolioStore";
 
 class RootStore {
-    constructor() {
-        this.portfolioStore = new PortfolioStore(this);
-    }
+  constructor() {
+    this.portfolioStore = new PortfolioStore(this);
+  }
 }
 
-export default RootStore; 
+export default RootStore;

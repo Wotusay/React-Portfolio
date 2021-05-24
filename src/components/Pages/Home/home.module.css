@@ -2,8 +2,9 @@
     margin-top: 60px;
     margin-left: 160px;
     opacity: 0;
-    
+    z-index: 100;
     position: absolute;
+    cursor: pointer;
 }
 
 
@@ -52,3 +53,4 @@
     overflow: hidden;
     height: 67vh;
 }
+

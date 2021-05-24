@@ -1,0 +1,80 @@
+.title {
+    font-family: 'Rota';
+    font-weight: 900;
+    font-size: 7rem;
+    line-height: 8.7rem;
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 1.2rem;
+    z-index: 3;
+}
+
+.line {
+    margin-top: 3rem;
+
+}
+
+.text  {
+    margin-left: 3.1rem;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.itemsWrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20rem 15rem 16rem 15rem 15rem;
+    grid-gap: 12rem;
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+}
+
+.itemWrapper {
+
+}
+
+.titleSection {
+    color: white;
+    font-family: 'Rota';
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.item {
+    font-family: 'Rota';
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: #D9D9D9;
+    margin-top: 1.5rem;
+    margin-left: 0.2rem;
+}
+
+.descriptionWrapper {
+    justify-content: center;
+    display: flex;
+}
+
+.description {
+    width: 120rem;
+    font-family: 'Rota';
+    padding: 2rem;
+    color: #D9D9D9;
+    font-size: 3rem;
+}
+
+.titleDescription {
+    color: white;
+    font-family: 'Rota';
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 26rem;
+    margin-bottom: 2rem;
+}
