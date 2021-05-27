@@ -8,6 +8,7 @@ class GraphQLService {
           tagline
           client
           role
+          slug
           project
           website
           description
@@ -24,6 +25,16 @@ class GraphQLService {
             url
             width
             height
+          }
+          video {
+            url
+            title
+          }
+          imagesCollection{
+            items {
+              title
+              url
+            }
           }
         }
       }

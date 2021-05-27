@@ -14,7 +14,13 @@ class PortfolioStore {
     items.portfolioItemCollection.items.forEach((item) => {
       this.portfolioItems.push(item);
     });
+
   };
+
+  findArrayWithSlug = (slug) => {
+    let obj = this.portfolioItems.find(s => s.slug === slug);
+    return obj;
+  }
 }
 
 decorate(PortfolioStore, {

@@ -47,13 +47,15 @@ const App = () => {
     <>
       {loaded === false ? (
         <motion.div
-          style={{ opacity: 0, translateY: '101px' }}
-          initial={false}
+          style={{ opacity: 0, translateY: '101px',overflow: 'hidden' }}
+          initial={true}
           animate={animation}
           className="begin">
-          <motion.span animate>Wout</motion.span>
+          <motion.span  animate  style={{ overflowY: 'hidden',
+            overflowX: 'hidden', }} >Wout</motion.span>
           <motion.span
-            style={{ opacity: 0, translateX: '101px' }}
+            style={{ opacity: 0, translateX: '101px',   overflowY: 'hidden',
+            overflowX: 'hidden', }}
             animate={textAnimation}>
             .
           </motion.span>

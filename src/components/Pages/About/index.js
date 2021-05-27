@@ -18,8 +18,10 @@ const About = () => {
   const [interests, inInterestsView] = useInView({delay:100});
   const [contact, inContactView] = useInView({delay:100});
 
+
   const setOverflow = () => {
-    document.body.style.overflow = "auto";
+    document.body.style.overflowY = 'auto';
+    document.body.style.overflowX = 'hidden';
     document.body.style.height = "auto";
   };
 

@@ -47,11 +47,12 @@ body {
     height: 100vh;
     font-family: 'Rota';
     font-weight: normal;
+
 }
 
 .begin {
   width: 100vw;
-  height: 95vh;
+  height: 89vh;
   display: flex;
   justify-content: center;
   align-items: center;

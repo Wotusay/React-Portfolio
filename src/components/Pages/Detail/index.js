@@ -15,17 +15,22 @@ const Detail = () => {
   const { id } = useParams();
   const history = useHistory();
   const { portfolioStore } = useStores();
-  const item = portfolioStore.portfolioItems[id];
+  const item = portfolioStore.findArrayWithSlug(id);
 
   const itemsAnimation = useAnimation();
   const descriptionAnimation = useAnimation();
+  const videoAnimation = useAnimation();
+  const picturesAnimation = useAnimation();
 
   const [description, inDescriptionView] = useInView({ delay: 100 });
   const [items, inItemsView] = useInView({ delay: 100 });
+  const [video, inVideoAView] = useInView({ delay: 100 });
+  const [pictures, inPicturesView] = useInView({ delay: 100 });
 
   console.log(item);
   const setOverflow = () => {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflowY = 'auto';
+    document.body.style.overflowX = 'hidden';
     document.body.style.height = 'auto';
   };
 
@@ -36,7 +41,28 @@ const Detail = () => {
     if (inDescriptionView) {
       descriptionAnimation.start({ opacity: 1 });
     }
-  }, [inItemsView, inDescriptionView, descriptionAnimation, itemsAnimation]);
+
+    if (inVideoAView) {
+      videoAnimation.start({ opacity: 1 });
+    }
+
+    if (inPicturesView) {
+      picturesAnimation.start({ opacity: 1 });
+    }
+  }, [
+    inItemsView,
+    inPicturesView,
+    picturesAnimation,
+    inVideoAView,
+    videoAnimation,
+    inDescriptionView,
+    descriptionAnimation,
+    itemsAnimation,
+  ]);
+
+  const clickAble = (e) => {
+    window.open(item.website);
+  };
 
   return useObserver(() => {
     if (item === undefined) {
@@ -52,7 +78,21 @@ const Detail = () => {
               exit={{ translateY: '-1001px', opacity: 0, rotate: '-25deg' }}
               transition={transitionTwo}
               className={styles.picture}>
-              <img
+              <motion.img
+                onClick={item.website === null ? null : (e) => clickAble(e)}
+                whileHover={
+                  item.website === null
+                    ? null
+                    : {
+                        scale: 1.05,
+                        transition: {
+                          duration: 0.8,
+                          ease: [0.43, 0.13, 0.23, 0.96],
+                        },
+                      }
+                }
+                transition={transitionTwo}
+                style={item.website === null ? null : { cursor: 'pointer' }}
                 width={item.detail.width}
                 height={item.detail.height}
                 alt={item.detail.title}
@@ -87,6 +127,15 @@ const Detail = () => {
                   className={styles.title}>
                   {item.title}
                 </motion.h2>
+
+                <motion.p
+                  initial={{ translateX: '-101px', opacity: 0 }}
+                  animate={{ translateX: '0px', opacity: 1 }}
+                  exit={{ translateX: '-101px', opacity: 0 }}
+                  transition={transition}
+                  className={styles.tagline}>
+                  {item.tagline}
+                </motion.p>
               </div>
             </div>
             <motion.div
@@ -125,7 +174,10 @@ const Detail = () => {
               {item.website === null ? null : (
                 <div className={styles.itemWrapper}>
                   <p className={styles.titleSection}>🔗</p>
-                  <a href={item.website} className={styles.item}>
+                  <a
+                    href={item.website}
+                    target="_blank"
+                    className={styles.item} rel="noreferrer">
                     Visit the site
                   </a>
                 </div>
@@ -143,6 +195,46 @@ const Detail = () => {
               <p className={styles.description}>{item.description}</p>
             </div>
           </motion.div>
+
+          {item.video === null ? null : (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={videoAnimation}
+              transition={transitionOne}
+              exit={{ opacity: 0 }}
+              ref={video}
+              className={styles.center}>
+              <video
+                width="1150"
+                height="650"
+                preload="none"
+                autoPlay
+                muted
+                loop
+                controls>
+                <source src={item.video.url}></source>
+              </video>
+            </motion.div>
+          )}
+
+          {item.imagesCollection.items.length === 0 ? null : (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={picturesAnimation}
+              transition={transitionOne}
+              exit={{ opacity: 0 }}
+              ref={pictures}
+              className={styles.images}>
+              {item.imagesCollection.items.map((i) => (
+                <img
+                  src={i.url}
+                  alt={i.title}
+                  className={styles.image}
+                  width="944"
+                  height="522"></img>
+              ))}
+            </motion.div>
+          )}
         </>
       );
     }

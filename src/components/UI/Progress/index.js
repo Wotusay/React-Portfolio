@@ -19,7 +19,7 @@ const Proggress = ({ number, maxItems, animation }) => {
                   ? -50
                   : animation === "Decrease"
                   ? 50
-                  : 50,
+                  : 0,
             }}
             animate={{ opacity: 1, translateY: 0 }}
             exit={{
