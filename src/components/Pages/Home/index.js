@@ -2,12 +2,11 @@ import Title from '../../UI/Title';
 import styles from './home.module.css';
 import { motion } from 'framer-motion';
 import Proggress from '../../UI/Progress';
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { useStores } from '../../../hooks';
 import { useObserver } from 'mobx-react-lite';
 import { useHistory } from 'react-router';
 import { ROUTES } from '../../../consts';
-import _ from 'lodash';
 import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 
 const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -21,7 +20,6 @@ const Home = () => {
   const allItems = portfolioStore.portfolioItems.length;
   const [countProgress, setCountProgress] = useState(uiStore.progress);
   const history = useHistory();
-  console.log(uiStore.number, uiStore.progress);
   const [count, setCount] = useState(uiStore.number);
 
   const imageVariants = {
@@ -98,6 +96,7 @@ const Home = () => {
 
   const setOverflow = () => {
     document.body.style.overflow = 'hidden';
+    window.scrollTo(0,0);
   };
 
   const clickHandler = (e) => {
@@ -105,27 +104,17 @@ const Home = () => {
     history.push(ROUTES.detail.to + portfolioStore.portfolioItems[count].slug);
   };
 
-  const wheelHandeler = (e) => {
-    console.log(e);
-    if (e.deltaY > 0) {
-      handleClickNext();
-      return;
-    } else {
-      handleClickPrev();
-      return;
-    }
-  };
-
-  const onWheelThrottled = useMemo(() => _.debounce(wheelHandeler, 600));
 
   return useObserver(() => (
     <>
       <ReactScrollWheelHandler
         upHandler={handleClickPrev}
         downHandler={handleClickNext}
-        timeout={400}>
+        wheelConfig={[7,10,0.05]}
+        style={{
+          width: "100vw",
+          height: "100vh", position:'absolute'}}>
         <div
-          onWheel={onWheelThrottled}
           onLoad={setOverflow()}
           className={styles.homeWrapper}>
           <div

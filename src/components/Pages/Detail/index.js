@@ -5,7 +5,7 @@ import { ROUTES } from '../../../consts';
 import { useStores } from '../../../hooks';
 import styles from './detail.module.css';
 import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-hook-inview';
+import { useInView } from "react-intersection-observer";
 
 const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
 const transitionOne = { duration: 1.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -22,10 +22,10 @@ const Detail = () => {
   const videoAnimation = useAnimation();
   const picturesAnimation = useAnimation();
 
-  const [description, inDescriptionView] = useInView({ delay: 100 });
-  const [items, inItemsView] = useInView({ delay: 100 });
-  const [video, inVideoAView] = useInView({ delay: 100 });
-  const [pictures, inPicturesView] = useInView({ delay: 100 });
+  const [description, inDescriptionView] = useInView({ triggerOnce:true ,delay: 100 });
+  const [items, inItemsView] = useInView({ triggerOnce:true ,delay: 100 });
+  const [video, inVideoAView] = useInView({ triggerOnce:true ,delay: 100 });
+  const [pictures, inPicturesView] = useInView({ triggerOnce:true ,delay: 100 });
 
   console.log(item);
   const setOverflow = () => {

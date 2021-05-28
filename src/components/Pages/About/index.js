@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./about.module.css";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-hook-inview";
+import { useInView } from "react-intersection-observer";
 
 const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
 const transitionOne = { duration: 1.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -14,9 +14,9 @@ const About = () => {
   const interestsAnimation = useAnimation();
   const contactAnimation = useAnimation();
 
-  const [mainSkills, inMainSkillsView] = useInView({delay:100});
-  const [interests, inInterestsView] = useInView({delay:100});
-  const [contact, inContactView] = useInView({delay:100});
+  const [mainSkills, inMainSkillsView] = useInView({ triggerOnce:true});
+  const [interests, inInterestsView] = useInView({ triggerOnce:true});
+  const [contact, inContactView] = useInView({ triggerOnce:true});
 
 
   const setOverflow = () => {
