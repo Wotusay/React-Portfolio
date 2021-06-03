@@ -17,9 +17,7 @@
     font-size: 7rem;
     line-height: 8.7rem;
 }
-body {
-    overflow: auto;
-}
+
 
 .aboutSection {
     display: flex;
@@ -123,4 +121,749 @@ body {
 
 .button:hover {
     background-color: rgb(224, 224, 224);
+}
+
+@media only screen and (min-width: 320px) { 
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        width: 30rem;
+    }
+    
+    
+    .titleMid {
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+    }
+
+    
+    .aboutSection > img {
+        display: none;
+
+    }
+
+    .aboutSection {
+        margin-left: 1rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        grid-column-gap: 5rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 12rem 12rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+        margin-left: unset;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 1rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 100%;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 30rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 1.8rem;
+        width: 156.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        align-items: center;
+        margin-left: 3rem;
+        grid-column-gap:5rem;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 12rem 12rem;
+    }
+
+}
+
+@media only screen and (min-width: 410px) { 
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 3.5rem;
+        line-height: 3.7rem;
+        width: 38rem;
+    }
+    
+    
+    .titleMid {
+        font-size: 3.5rem;
+        line-height: 3.7rem;
+    }
+
+    
+    .aboutSection > img {
+        display: none;
+
+    }
+
+    .aboutSection {
+        margin-left: 2rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        grid-column-gap: 5rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 14rem 14rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+        margin-left: unset;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 2rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+        font-size: 2rem;
+        line-height: 2.6rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 100%;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 38rem;
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 2rem;
+        width: 206.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        align-items: center;
+        margin-left: 3rem;
+        grid-column-gap:5rem;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 14rem 14rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 500px) { 
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 3.5rem;
+        line-height: 3.7rem;
+        width: 40rem;
+    }
+    
+    
+    .titleMid {
+        font-size: 3.5rem;
+        line-height: 3.7rem;
+    }
+
+    
+    .aboutSection > img {
+        display: none;
+
+    }
+
+    .aboutSection {
+        margin-left: 5rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        grid-column-gap: 5rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 20rem 20rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+        margin-left: unset;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 5rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 100%;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 40rem;
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 2rem;
+        width: 206.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        align-items: center;
+        margin-left: 3rem;
+        grid-column-gap:11rem;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 12rem 12rem;
+    }
+
+}
+
+@media only screen and (min-width: 650px) { 
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 5rem;
+        line-height: 5.7rem;
+        width: 48rem;
+    }
+    
+    
+    .titleMid {
+        font-size: 5rem;
+        line-height: 5.7rem;
+    }
+
+    
+    .aboutSection > img {
+        display: none;
+
+    }
+
+    .aboutSection {
+        margin-left: 5rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        grid-column-gap: 5rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 25rem 25rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+        margin-left: unset;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 5rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+        font-size: 3rem;
+        line-height: 3.7rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 100%;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 55rem;
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 2rem;
+        width: 206.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        align-items: center;
+        margin-left: 3rem;
+        grid-column-gap:11rem;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 12rem 12rem 12rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) { 
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 5rem;
+        line-height: 5.7rem;
+        width: 64rem;
+    }
+    
+    
+    .titleMid {
+
+        font-size: 5rem;
+        line-height: 5.7rem;
+    }
+
+    
+    .aboutSection > img {
+        display: none;
+
+    }
+
+    .aboutSection {
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        grid-column-gap: 4rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 30rem 30rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+        margin-left: -2rem;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+        font-size: 3rem;
+        line-height: 3.7rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 32rem;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 55rem;
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 2rem;
+        width: 206.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        align-items: center;
+        margin-left: 5.5rem;
+        grid-column-gap:11rem;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 14rem 14rem 14rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 900px) {
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 5rem;
+        line-height: 5.7rem;
+        width: 64rem;
+    }
+    
+    
+    .titleMid {
+
+        font-size: 5rem;
+        line-height: 5.7rem;
+    }
+
+    
+    .aboutSection > img {
+        display: none;
+
+    }
+
+    .aboutSection {
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        grid-column-gap: 14rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 32rem 32rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+        font-size: 3rem;
+        line-height: 3.7rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 32rem;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 55rem;
+        font-size: 2.5rem;
+        line-height: 2.7rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 2rem;
+        width: 206.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        align-items: center;
+        margin-left: 10rem;
+        grid-column-gap:11rem;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 17rem 17rem 17rem;
+    }
+
+}
+
+@media only screen and (min-width: 1150px) { 
+
+    .aboutSection > img {
+        display: initial;
+
+    }
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 7rem;
+        line-height: 8.7rem;
+        width: 64rem;
+    }
+    
+    
+    .titleMid {
+
+        font-size: 7rem;
+        line-height: 8.7rem;
+    }
+
+    
+
+    .aboutSection {
+        display: flex;
+
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        grid-column-gap: 28rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 32rem 32rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+
+        font-size: 3rem;
+        line-height: 3.7rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 32rem;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 65rem;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 2rem;
+        width: 206.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        grid-column-gap:11rem;
+        margin-left: unset;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 17rem 17rem 17rem 17rem;
+    }
+
+
+}
+
+@media only screen and (min-width: 1600px) { 
+
+    .social {
+        margin: 0px 1rem;
+    }
+    
+    .title {
+        font-size: 7rem;
+        line-height: 8.7rem;
+        width: 64rem;
+    }
+    
+    
+    .titleMid {
+
+        font-size: 7rem;
+        line-height: 8.7rem;
+    }
+
+    .wrapperInterests {
+        display: grid;
+        grid-column-gap:11rem;
+        grid-row-gap:6.5rem;
+        margin-top: 7.5rem;
+        grid-template-columns: 17rem 17rem 17rem 17rem;
+    }
+    
+    .aboutSection {
+
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+        margin-top: 9rem;
+
+        margin-bottom: 12rem;
+    }
+    
+    .containerSkills {
+        display: grid;
+        grid-column-gap: 28rem;
+        grid-row-gap: 5.5rem;
+        grid-template-columns: 32rem 32rem 32rem;
+        margin-top: 6.5rem;
+        margin-bottom: 12rem;
+    }
+    
+    
+    .skillsSection {
+        margin-left: 10rem;
+        margin-right: 10.1rem;
+    }
+    
+    .text {
+
+        font-size: 3rem;
+        line-height: 3.7rem;
+
+    }
+    
+    .skillsItem {
+        line-height: 4.7rem;
+        gap: 3rem;
+        width: 32rem;
+    }
+    
+    .icon {
+        margin-left: 1rem;
+        margin-top: -1rem;
+    }
+    
+    .underTitle {
+        width: 65rem;
+        font-size: 3rem;
+        line-height: 3.7rem;
+        color: #D9D9D9;
+        margin-top: 4.5rem;
+    }
+    
+    .button {
+        font-size: 2rem;
+        width: 206.28px;
+        height: 56.73px;
+        border-radius: 6px;
+        margin-top: 6rem;
+    }
 }

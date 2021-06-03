@@ -18,3 +18,85 @@
 .bigStroke {
     margin-top: -10px;
 }
+
+@media only screen and (min-width: 320px) { 
+    .number {
+        font-size: 25px;
+        line-height: 30px;
+        letter-spacing: 0.1em;
+        margin: 0px 10px;
+    }
+
+    .bigStroke  >  path {
+        stroke-width: 2px;
+    }
+
+}
+
+@media only screen and (min-width: 450px) { 
+    .number {
+        font-size: 35px;
+        line-height: 50px;
+        letter-spacing: 0.1em;
+        margin: 0px 20px;
+    }
+
+    .bigStroke  >  path {
+        stroke-width: 2px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) { 
+    .number {
+        font-size: 35px;
+        line-height: 50px;
+        letter-spacing: 0.1em;
+        margin: 0px 20px;
+    }
+
+    .bigStroke  >  path {
+        stroke-width: 2px;
+    }
+}
+
+
+@media only screen and (min-width: 900px) {
+    .number {
+        font-size: 35px;
+        line-height: 50px;
+        letter-spacing: 0.1em;
+        margin: 0px 20px;
+    }
+    .bigStroke  >  path {
+        stroke-width: 6px;
+    }
+
+}
+
+@media only screen and (min-width: 1150px) { 
+    .number {
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: 0.1em;
+        margin: 0px 20px;
+    }
+
+    .bigStroke  >  path {
+        stroke-width: 6px;
+    }
+
+}
+
+@media only screen and (min-width: 1600px) { 
+    .number {
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: 0.1em;
+        margin: 0px 20px;
+    }
+
+    .bigStroke  >  path {
+        stroke-width: 6px;
+    }
+}

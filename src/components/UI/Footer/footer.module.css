@@ -1,25 +1,3 @@
-.NavGrid {
-    display: flex;
-    justify-content: space-between;
-    z-index: 2;
-}
-
-.Navitems {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 6.8rem;
-    z-index: 2;
-    padding-right: 10rem;
-}
-
-.Navitem {
-    color: white;
-    font-size: 1.6rem;
-    font-family: 'Montserrat';
-    font-weight: 600;
-}
 
 .item {
     margin: 0px 3.7rem;
@@ -29,44 +7,45 @@
     border-bottom: 2px solid transparent;
 }
 
+
 .item:hover {
     border-bottom: 2px solid white;
 }
 
-.logo {
-    font-family: 'Rota';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 5rem;
-}
-
-.titleWrapper {
-    padding-top: 5rem;
-    padding-left: 10rem;
-}
-
-.social {
-    opacity: 0.8;
-    margin: 0px 1rem;
-    transition: all ease 600ms;
-}
-
-.social:hover {
-   opacity: 1;
-}
-
-.active {
-    margin: 0px 3.7rem;
-    border-bottom: 2px solid white;
-    padding-bottom: 0.4rem;
+.Navitems {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6.8rem;
     z-index: 2;
+    padding-right: 5rem;
 }
+
+.Navitem {
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.NavGrid {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+
+.line {
+    margin-top: 7.5rem;
+}
+
 
 
 @media only screen and (min-width: 320px) { 
     .Navitems {
         padding-top: 4.8rem;
-        padding-right: 2rem;
+        padding-right: 1rem;
     }
     
     .Navitem {
@@ -74,21 +53,12 @@
     }
     
     .item {
-        margin: 0px 2.7rem;
+        margin: 0px 1.7rem;
         padding-bottom: 0.4rem;
     }
     
     .item:hover {
         border-bottom: 2px solid white;
-    }
-    
-    .logo {
-        font-size: 2.5rem;
-    }
-    
-    .titleWrapper {
-        padding-top: 5rem;
-        padding-left: 2rem;
     }
     
     .socials {
@@ -108,6 +78,11 @@
     .item:nth-child(3) {
         display: none;
     }
+
+    .line {
+        display: none;
+    }
+    
 }
 
 
@@ -156,10 +131,19 @@
     .item:nth-child(3) {
         display: none;
     }
+
+    .line {
+        display: none;
+    }
+
+
 }
 
 
 @media only screen and (min-width: 768px) {
+    .line {
+        display: initial;
+    }
     .item:nth-child(3) {
         display: inherit;
     }

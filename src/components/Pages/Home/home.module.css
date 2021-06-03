@@ -8,21 +8,6 @@
 }
 
 
-.pictureLatest {
-    z-index: -1;
-    position: absolute;
-
-}
-.pictureNewest {
-    z-index: -1;
-    filter: blur(4px) drop-shadow(-2px -10px 25px rgba(0, 0, 0, 0.29));
-    position: absolute;
-    z-index: -2;
-    transform: rotate(-15deg);
-    right: .03px;
-    bottom: -550.1px;
-}
-
 .homeWrapper {
     overflow: hidden;
     display: flex;
@@ -52,5 +37,194 @@
 .spinner {
     overflow: hidden;
     height: 67vh;
+}
+
+
+@media only screen and (min-width: 320px) { 
+    .picture {
+        margin-top: 80px;
+        margin-left: unset;
+        left: -290px;
+        opacity: 0;
+        width: calc(839px / 2.8) ;
+        height: calc(586px /2.8) ;
+        z-index: -1;
+    }
+
+    .spinner {
+        position: relative;
+        overflow: unset;
+    }
+
+    .footerWrapper {
+        margin-top: 4vh;
+    }
+
+
+.buttonLeft {
+    background: none;
+    border: none;
+    margin-left: 3.2rem;
+
+}
+
+.buttonRight {
+    background: none;
+    border: none;
+    margin-right: 3.2rem;
+
+}
+}
+
+@media only screen and (min-width: 410px) { 
+    .picture {
+        margin-top: 80px;
+        margin-left: unset;
+        left: -290px;
+        opacity: 0;
+        width: calc(839px / 2.2) ;
+        height: calc(586px /2.2) ;
+        z-index: -1;
+    }
+
+    .spinner {
+        position: relative;
+        overflow: unset;
+
+    }
+
+    .footerWrapper {
+        margin-top: 4vh;
+    }
+
+
+.buttonLeft {
+    background: none;
+    border: none;
+    margin-left: 6.2rem;
+
+}
+
+.buttonRight {
+    background: none;
+    border: none;
+    margin-right: 6.2rem;
+
+}
+}
+
+@media only screen and (min-width: 650px) { 
+    .picture {
+        margin-top: 80px;
+        left: -45vw;
+        opacity: 0;
+        width: calc(839px / 1.8) ;
+        height: calc(586px / 1.8) ;
+        z-index: -1;
+    }
+
+
+    .spinner {
+        position: relative;
+        overflow: unset;
+    }
+
+    .footerWrapper {
+        margin-top: 4vh;
+    }
+
+    .buttonLeft {
+        background: none;
+        border: none;
+        margin-left: 10.2rem;
+    
+    }
+    
+    .buttonRight {
+        background: none;
+        border: none;
+        margin-right: 10.2rem;
+    
+    }
+}
+
+
+@media only screen and (min-width: 768px) { 
+    .picture {
+        z-index: 1;
+        cursor: pointer;
+        margin-top: 80px;
+        left: -100px;
+        opacity: 0;
+        width: calc(839px / 1.8) ;
+        height: calc(586px / 1.8) ;
+
+    }
+
+    .footerWrapper {
+        margin-top: 4vh;
+    }
+}
+
+
+@media only screen and (min-width: 900px) { 
+    .picture {
+        z-index: 1;
+        cursor: pointer;
+        margin-top: 80px;
+        margin-left: 50px;
+        left: -85px;
+        opacity: 0;
+        width: calc(839px / 1.5) ;
+        height: calc(586px / 1.5) ;
+
+    }
+
+    .footerWrapper {
+        margin-top: 4vh;
+    }
+}
+
+@media only screen and (min-width: 1150px) { 
+    .picture {
+        z-index: 1;
+        cursor: pointer;
+        margin-top: 100px;
+        margin-left: 6vw;
+        opacity: 0;
+        width: calc(839px / 1.5) ;
+        height: calc(586px / 1.5) ;
+    }
+    .footerWrapper {
+        margin-top: 9vh;
+    }
+
+    .spinner {
+        position: relative;
+        overflow: unset;
+    }
+}
+
+@media only screen and (min-width: 1600px) { 
+    .picture {
+        z-index: 1;
+        cursor: pointer;
+        margin-top: 60px;
+        margin-left: 160px;
+        opacity: 0;
+        left: unset;
+        width: 839px;
+        height: 586px;
+
+    }
+
+    .footerWrapper {
+        margin-top: 9rem;
+    }
+
+    .spinner {
+        position: initial;
+        overflow: hidden;
+    }
 }
 

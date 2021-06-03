@@ -6,6 +6,7 @@ import { useStores } from '../../../hooks';
 import styles from './detail.module.css';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
+import Footer from '../../UI/Footer';
 
 const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
 const transitionOne = { duration: 1.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -71,7 +72,7 @@ const Detail = () => {
     } else {
       return (
         <>
-          <div onLoad={setOverflow()}>
+          <div style={{overflowY: 'hidden'}} onLoad={setOverflow()}>
             <motion.div
               initial={{ translateY: '-901px', opacity: 0, rotate: '15deg' }}
               animate={{ translateY: '0px', rotate: '0deg', opacity: 1 }}
@@ -144,12 +145,7 @@ const Detail = () => {
               animate={itemsAnimation}
               transition={transitionOne}
               exit={{ opacity: 0 }}
-              style={{
-                gridTemplateColumns:
-                  item.website === null
-                    ? '20rem 15rem 16rem 15rem'
-                    : '20rem 15rem 16rem 15rem 15rem',
-              }}
+
               className={styles.itemsWrapper}>
               <div className={styles.itemWrapper}>
                 <p className={styles.titleSection}>🤵🏼</p>
@@ -205,6 +201,7 @@ const Detail = () => {
               ref={video}
               className={styles.center}>
               <video
+                className={styles.video}
                 width="1150"
                 height="650"
                 preload="none"
@@ -235,6 +232,8 @@ const Detail = () => {
               ))}
             </motion.div>
           )}
+
+          <Footer />
         </>
       );
     }

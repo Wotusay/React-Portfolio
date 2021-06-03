@@ -23,7 +23,7 @@ const Title = ({ text, tag, count }) => {
             viewBox="0 0 101 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 3.34401H100.728" stroke="white" strokeWidth="6" />
+            <path className={styles.stroke} d="M0 3.34401H100.728" stroke="white" strokeWidth="6" />
           </svg>
         </motion.div>
 
