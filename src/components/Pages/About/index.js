@@ -55,10 +55,10 @@ const About = () => {
               My name is <strong>Wout Salembier</strong>. I'm a 21 year old
               developer. I have a bachelors degree from <br />
               <a className={styles.textLink} href="https://www.devine.be/">
-                Devine at Howest and The School of Arts (KASK)
-              </a>
-              . I currently work at <br/>
-              <a className={styles.textLink} href="https://www.wheelhouse.be/"> Wheelhouse as Javascript Engineer</a>
+                Devine at Howest and The School of Arts (KASK).
+              </a> <br/>
+               I currently work at <br/>
+              <a className={styles.textLink} href="https://www.wheelhouse.be/"> Wheelhouse as Javascript Engineer.</a>
             </motion.p>
 
 
