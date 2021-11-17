@@ -10,7 +10,6 @@ class PortfolioStore {
 
   loadAllItems = async () => {
     const items = await this.graphQlService.getAll();
-    console.log(items.portfolioItemCollection.items);
     items.portfolioItemCollection.items.forEach((item) => {
       this.portfolioItems.push(item);
     });

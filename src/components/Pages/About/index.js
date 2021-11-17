@@ -6,16 +6,11 @@ import { useInView } from "react-intersection-observer";
 const transition = { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] };
 const transitionOne = { duration: 1.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
-const transitionThree = { duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] };
 
 
 const About = () => {
-  const mainSkillsAnimation = useAnimation();
-  const interestsAnimation = useAnimation();
-  const contactAnimation = useAnimation();
 
-  const [mainSkills, inMainSkillsView] = useInView({ triggerOnce:true});
-  const [interests, inInterestsView] = useInView({ triggerOnce:true});
+  const contactAnimation = useAnimation();
   const [contact, inContactView] = useInView({ triggerOnce:true});
 
 
@@ -26,23 +21,12 @@ const About = () => {
   };
 
   useEffect(() => {
-    if (inMainSkillsView) {
-      mainSkillsAnimation.start({ opacity: 1 });
-    }
-
-    if (inInterestsView) {
-      interestsAnimation.start({ opacity: 1 });
-    }
 
     if (inContactView) {
       contactAnimation.start({ opacity: 1 });
     }
   }, [
-    inMainSkillsView,
     inContactView,
-    inInterestsView,
-    mainSkillsAnimation,
-    interestsAnimation,
     contactAnimation,
   ]);
   return (
@@ -58,7 +42,7 @@ const About = () => {
               transition={transition}
               className={styles.title}
             >
-              A digital creative with a love for coding
+              A developer with an eager of learning new things
             </motion.h2>
             <motion.p
               initial={{ translateX: "-20px", opacity: 0 }}
@@ -68,23 +52,42 @@ const About = () => {
               className={styles.underTitle}
             >
               {" "}
-              My name is <strong>Wout Salembier</strong>. I'm a 20 year old
-              creative developer. I’m currently studying <br />
+              My name is <strong>Wout Salembier</strong>. I'm a 21 year old
+              developer. I have a bachelors degree from <br />
               <a className={styles.textLink} href="https://www.devine.be/">
                 Devine at Howest and The School of Arts (KASK)
               </a>
-              .
+              . I currently work at <br/>
+              <a className={styles.textLink} href="https://www.wheelhouse.be/"> Wheelhouse as Javascript Engineer</a>
             </motion.p>
-            <motion.button
-              type="submit"
-              onClick={() => window.open("../assets/cv.pdf")}
+
+
+            <motion.p
+              initial={{ translateX: "-20px", opacity: 0 }}
+              animate={{ translateX: "0px", opacity: 1 }}
+              exit={{ translateX: "-20px", opacity: 0 }}
+              transition={transition}
+              className={styles.underTitle}
+            >
+              {" "}
+              My biggest interest in Devine was being a full fletched <strong> developer</strong>. In my early high school days i found a way i can code things that can make <strong> my life easier</strong>.
+             <br/> <br /> I was <strong>immediately hooked</strong> on the fact of writing something and seeing it <strong>(a)live</strong> on my screen. <br /> <br />
+              Thats the reason i chose in Devine for being a <strong> Creative Developer </strong> with an eye for <strong> good design</strong>.
+            </motion.p>
+            <br></br>
+            <br></br>
+            <br></br>
+            <motion.a
+              href='../assets/CV.pdf'
+              download
+              style={{textDecoration: 'none'}}
               initial={{ translateX: "-21px", opacity: 0 }}
               animate={{ translateX: "0px", opacity: 1 }}
               exit={{ translateX: "-21px", opacity: 0 }}
               transition={transition}
               className={styles.button}
             >
-              Resume{" "}
+              Traditional CV{" "}
               <svg
                 className={styles.icon}
                 width="21"
@@ -115,12 +118,14 @@ const About = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-            </motion.button>
+            </motion.a>
           </div>
           <motion.img
-            initial={{ translateX: "101px", opacity: 0 }}
-            animate={{ translateX: "0px", opacity: 1 }}
-            exit={{ translateX: "101px", opacity: 0 }}
+
+            className={styles.picture}
+            initial={{ translateX: "101px",translateY: "-151px", opacity: 0 }}
+            animate={{ translateX: "-10px", translateY: "-151px", opacity: 1 }}
+            exit={{ translateX: "101px", translateY: "-151px", opacity: 0 }}
             transition={transitionOne}
             width="389"
             height="550"
@@ -128,115 +133,7 @@ const About = () => {
             src="../assets/pictures/profile.png"
           />
         </section>
-
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={mainSkillsAnimation}
-          transition={transitionThree}
-          exit={{ opacity: 0 }}
-          ref={mainSkills}
-          className={styles.skillsSection}
-        >
-          <h2 className={styles.title}>Main skills</h2>
-          <div className={styles.containerSkills}>
-            <div className={styles.skillsItem}>
-              <p className={styles.text}>
-                <strong>Frontend development</strong>
-              </p>
-              <p className={styles.text}>
-                hmtl, css, sass, js, react.js, three,js, Webpack{" "}
-              </p>
-            </div>
-            <div className={styles.skillsItem}>
-              <p className={styles.text}>
-                <strong>UI/UX design </strong>
-              </p>
-              <p className={styles.text}>Cross Media UI/UX design </p>
-            </div>
-            <div className={styles.skillsItem}>
-              <p className={styles.text}>
-                <strong>Motion</strong>
-              </p>
-              <p className={styles.text}>
-                Blender, Cinema4D, Adobe After Effects{" "}
-              </p>
-            </div>
-
-            <div className={styles.skillsItem}>
-              <p className={styles.text}>
-                <strong>Backend development</strong>
-              </p>
-              <p className={styles.text}>
-                Node.js, Firebase, Socket.io, php, MySql, contentful cms, WebRTC{" "}
-              </p>
-            </div>
-
-            <div className={styles.skillsItem}>
-              <p className={styles.text}>
-                <strong>Design software</strong>
-              </p>
-              <p className={styles.text}>
-                Figma, Sketch, Illustrator, Photoshop{" "}
-              </p>
-            </div>
-
-            <div className={styles.skillsItem}>
-              <p className={styles.text}>
-                <strong>Other Tools</strong>
-              </p>
-              <p className={styles.text}>
-                Git, Wordpress, <br /> Shaders, Unity, <br />
-                Arduino Uno{" "}
-              </p>
-            </div>
-          </div>
-        </motion.section>
-
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={interestsAnimation}
-          transition={transitionThree}
-          exit={{ opacity: 0 }}
-          ref={interests}
-          className={styles.interestsContainer}
-        >
-          <h2 className={styles.titleMid}>Interests</h2>
-          <div className={styles.wrapperInterests}>
-            <p className={styles.text}>
-              {" "}
-              <strong>Development</strong>
-            </p>
-            <p className={styles.text}>
-              {" "}
-              <strong>Motion</strong>
-            </p>
-            <p className={styles.text}>
-              {" "}
-              <strong>Design</strong>
-            </p>
-            <p className={styles.text}>
-              {" "}
-              <strong>Livestreaming</strong>
-            </p>
-            <p className={styles.text}>
-              {" "}
-              <strong>Finance</strong>
-            </p>
-            <p className={styles.text}>
-              {" "}
-              <strong>Tech</strong>
-            </p>
-            <p className={styles.text}>
-              {" "}
-              <strong>Sports</strong>
-            </p>
-            <p className={styles.text}>
-              {" "}
-              <strong>Gaming</strong>
-            </p>
-          </div>
-        </motion.section>
-
+        
         <motion.section
           initial={{ opacity: 0 }}
           animate={contactAnimation}
@@ -245,17 +142,13 @@ const About = () => {
           ref={contact}
           className={styles.contactContainer}
         >
-          <h2 className={styles.titleMid}>Get in touch</h2>
-          <p className={styles.text}>
-            Ready to work on your next project together? <br />
-            or you got anything on your mind
-          </p>
+          <h2 className={styles.titleMid}>Like what u saw ?</h2>
           <p className={styles.text}>
             <a
               className={styles.textLink}
               href="mailto:wout.salembier@hotmail.com"
             >
-              Drop something by
+             Then send me an e-mail
             </a>
           </p>
           <div className={styles.socials}>

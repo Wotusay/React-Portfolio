@@ -26,17 +26,10 @@
     margin-right: 10.1rem;
     margin-top: 9rem;
     align-items: center;
-    margin-bottom: 12rem;
+    margin-bottom: 9rem;
 }
 
-.containerSkills {
-    display: grid;
-    grid-column-gap: 28rem;
-    grid-row-gap: 5.5rem;
-    grid-template-columns: 32rem 32rem 32rem;
-    margin-top: 6.5rem;
-    margin-bottom: 12rem;
-}
+
 
 
 .skillsSection {
@@ -77,12 +70,12 @@
     background-color: white;
     color: #2242BC;
     border: none;
+    padding: 2rem;
     font-size: 2rem;
     font-weight: 600;
     width: 206.28px;
-    height: 56.73px;
     border-radius: 6px;
-    margin-top: 6rem;
+    margin-top: rem;
     transition: background-color 0.2s ease-in-out;
 }
 
@@ -115,8 +108,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12rem;
-
+    margin-bottom: 5rem;
 }
 
 .button:hover {
@@ -153,17 +145,10 @@
         display: grid;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 12rem;
+        margin-bottom: 9rem;
     }
     
-    .containerSkills {
-        grid-column-gap: 5rem;
-        grid-row-gap: 5.5rem;
-        grid-template-columns: 12rem 12rem;
-        margin-top: 6.5rem;
-        margin-bottom: 12rem;
-        margin-left: unset;
-    }
+
     
     
     .skillsSection {
@@ -201,17 +186,6 @@
         width: 156.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
-    }
-
-    .wrapperInterests {
-        display: grid;
-        align-items: center;
-        margin-left: 3rem;
-        grid-column-gap:5rem;
-        grid-row-gap:6.5rem;
-        margin-top: 7.5rem;
-        grid-template-columns: 12rem 12rem;
     }
 
 }
@@ -294,7 +268,7 @@
         width: 206.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
+
     }
 
     .wrapperInterests {
@@ -340,7 +314,7 @@
         display: grid;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 12rem;
+        margin-bottom: 9rem;
     }
     
     .containerSkills {
@@ -388,7 +362,7 @@
         width: 206.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
+
     }
 
     .wrapperInterests {
@@ -481,7 +455,7 @@
         width: 206.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
+
     }
 
     .wrapperInterests {
@@ -575,7 +549,7 @@
         width: 206.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
+
     }
 
     .wrapperInterests {
@@ -669,7 +643,7 @@
         width: 206.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
+
     }
 
     .wrapperInterests {
@@ -767,7 +741,7 @@
         width: 206.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
+
     }
 
     .wrapperInterests {
@@ -794,44 +768,18 @@
         width: 64rem;
     }
     
-    
     .titleMid {
-
         font-size: 7rem;
         line-height: 8.7rem;
     }
-
-    .wrapperInterests {
-        display: grid;
-        grid-column-gap:11rem;
-        grid-row-gap:6.5rem;
-        margin-top: 7.5rem;
-        grid-template-columns: 17rem 17rem 17rem 17rem;
-    }
     
     .aboutSection {
-
         margin-left: 10rem;
         margin-right: 10.1rem;
         margin-top: 9rem;
+        margin-bottom: 9rem;
+    }
 
-        margin-bottom: 12rem;
-    }
-    
-    .containerSkills {
-        display: grid;
-        grid-column-gap: 28rem;
-        grid-row-gap: 5.5rem;
-        grid-template-columns: 32rem 32rem 32rem;
-        margin-top: 6.5rem;
-        margin-bottom: 12rem;
-    }
-    
-    
-    .skillsSection {
-        margin-left: 10rem;
-        margin-right: 10.1rem;
-    }
     
     .text {
 
@@ -864,6 +812,10 @@
         width: 206.28px;
         height: 56.73px;
         border-radius: 6px;
-        margin-top: 6rem;
+
+    }
+
+    .picture {
+        margin-top: 10rem;
     }
 }

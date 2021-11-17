@@ -1,13 +1,13 @@
 import { Switch, Route } from 'react-router-dom';
-import Home from './components/Pages/Home';
 import Nav from './components/UI/Nav';
 import { ROUTES } from './consts';
 import { AnimatePresence } from 'framer-motion';
 import { motion, useAnimation } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
-import Empty from './components/UI/Empty';
-import About from './components/Pages/About';
-import Detail from './components/Pages/Detail';
+import React, { useEffect, useState, Suspense, lazy } from 'react';
+import Home from './components/Pages/Home';
+
+const About = lazy(() => import('./components/Pages/About'));
+const Detail = lazy(() => import('./components/Pages/Detail'));
 
 const App = () => {
   const [loaded, setLoaded] = useState(false);
@@ -47,15 +47,22 @@ const App = () => {
     <>
       {loaded === false ? (
         <motion.div
-          style={{ opacity: 0, translateY: '101px',overflow: 'hidden' }}
+          style={{ opacity: 0, translateY: '101px', overflow: 'hidden' }}
           initial={true}
           animate={animation}
           className="begin">
-          <motion.span  animate  style={{ overflowY: 'hidden',
-            overflowX: 'hidden', }} >Wout</motion.span>
           <motion.span
-            style={{ opacity: 0, translateX: '101px',   overflowY: 'hidden',
-            overflowX: 'hidden', }}
+            animate
+            style={{ overflowY: 'hidden', overflowX: 'hidden' }}>
+            Wout
+          </motion.span>
+          <motion.span
+            style={{
+              opacity: 0,
+              translateX: '101px',
+              overflowY: 'hidden',
+              overflowX: 'hidden',
+            }}
             animate={textAnimation}>
             .
           </motion.span>
@@ -63,6 +70,8 @@ const App = () => {
       ) : (
         <>
           <Nav></Nav>
+          <Suspense fallback={<div>.</div>}>
+
           <Route
             render={({ location }) => (
               <AnimatePresence exitBeforeEnter>
@@ -93,10 +102,9 @@ const App = () => {
               </AnimatePresence>
             )}
           />
+          </Suspense>
         </>
       )}
-
-      <Empty></Empty>
     </>
   );
 };
